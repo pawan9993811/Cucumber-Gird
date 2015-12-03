@@ -38,6 +38,8 @@ public class Hooks{
     public void setup() throws MalformedURLException,     InterruptedException {
     	DesiredCapabilities capability=null;
     	capability = gridStting(browser, version, os);
+    	
+    	//Give Node_IP:Node 
     	driver = new RemoteWebDriver(new URL("http://192.168.8.69:5566/wd/hub"), capability);
     	
     	}
