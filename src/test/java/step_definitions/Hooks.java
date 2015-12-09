@@ -2,6 +2,7 @@ package step_definitions;
 
 import java.net.MalformedURLException;
 
+import org.apache.maven.reporting.MavenReportException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -10,9 +11,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import com.github.mkolisnyk.cucumber.reporting.CucumberUsageReporting;
+
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -28,13 +33,23 @@ public class Hooks{
     /**
      * Delete all cookies at the start of each scenario to avoid
      * shared state between tests
+     * Run the test in node machine Local
      */
-  /*  public void openBrowser() throws MalformedURLException {
+ public void openBrowser() throws MalformedURLException {
     	System.out.println("Called openBrowser");
     	driver = new FirefoxDriver();
     	driver.manage().deleteAllCookies();
-    }*/
-
+    }
+    
+    
+    /**
+     * Run the test in NODE machine 
+     * 
+     */
+    
+    
+    
+/*
     public void setup() throws MalformedURLException,     InterruptedException {
     	DesiredCapabilities capability=null;
     	capability = gridStting(browser, version, os);
@@ -43,7 +58,7 @@ public class Hooks{
     	driver = new RemoteWebDriver(new URL("http://192.168.8.69:5566/wd/hub"), capability);
     	
     	}
- 
+ */
     
     @After
     /**
@@ -63,8 +78,11 @@ public class Hooks{
         
         }
         driver.quit();
+      
+        }
         
-    }
+        
+    
     
     
     

@@ -25,7 +25,7 @@ public class BrowserCommands{
        // wait.ignoring(WebDriverException.class);
         //wait.ignoring(StaleElementReferenceException.class);
     //    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='header-bottom-left']/ul/li[2]/a")));
-        driver.findElement(By.xpath(".//*[@id='header-bottom-left']/ul/li[2]/a")).click();
+        driver.findElement(By.xpath("")).click();
     }
     @Then("^he can nevigate new post$")
     public void he_can_nevigate_new_post() throws Throwable {
